@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="drawer-content">
     <!-- Desktop sidebar -->
     <aside
+      v-if="open"
       class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0"
     >
       <div class="py-4 text-gray-500 dark:text-gray-400">
@@ -175,7 +176,6 @@
             <button
               class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               aria-haspopup="true"
-              @click="togglePagesMenu"
             >
               <span class="inline-flex items-center">
                 <svg
@@ -265,7 +265,8 @@
     <!-- Backdrop -->
     <!-- <div/> -->
     <aside
-      class="fixed inset-y-0 z-20 flex-shrink-0 w-64 mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
+      v-if="open"
+      class="fixed inset-y-0 z-20 flex-shrink-0 w-full mt-16 overflow-y-auto bg-white dark:bg-gray-800 md:hidden"
     >
       <div class="py-4 text-gray-500 dark:text-gray-400">
         <a
@@ -438,7 +439,6 @@
             <button
               class="inline-flex items-center justify-between w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
               aria-haspopup="true"
-              @click="togglePagesMenu"
             >
               <span class="inline-flex items-center">
                 <svg
@@ -529,7 +529,10 @@
 
 <script>
 export default {
-  name: 'SidebarComponent'
+  name: 'SidebarComponent',
+  props: {
+    open: { type: Boolean, required: true }
+  }
 
 }
 </script>
