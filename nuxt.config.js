@@ -20,6 +20,7 @@ export default {
   ],
 
   plugins: [
+    '~/plugins/components.js'
   ],
 
   components: true,
@@ -31,7 +32,9 @@ export default {
   ],
 
   modules: [
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
 
   axios: {
