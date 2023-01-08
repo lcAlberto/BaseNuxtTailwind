@@ -21,6 +21,7 @@
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  layout: 'defaults'
 }
 </script>
