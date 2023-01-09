@@ -16,11 +16,13 @@ export default {
   },
 
   css: [
-    '~/assets/css/main.css'
+    '~/assets/css/main.css',
+    '@fortawesome/fontawesome-svg-core/styles.css'
   ],
 
   plugins: [
-    '~/plugins/components.js'
+    '~/plugins/components.js',
+    '~/plugins/fontawesome.js'
   ],
 
   components: true,

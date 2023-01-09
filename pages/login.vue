@@ -1,13 +1,36 @@
 <template>
   <div class="flex items-center justify-center p-6 sm:p-12 md:w-1/2">
     <div class="w-full">
-       <img src="~/assets/img/logo-site.png" class="mb-5"/>
+      <img src="~/assets/img/logo-site.png" class="mb-5">
       <h1
         class="mb-4 text-xl font-semibold text-gray-700 dark:text-gray-200"
       >
         Login
       </h1>
-      <input-text />
+      <input-text
+        label="Email"
+        placeholder="seu@email.com"
+        hint="Seu email é sua credencial"
+        error-message=""
+        label-icon="fa-solid fa-circle-info"
+        title="oii"
+        title-position="left"
+        size="md"
+      />
+      <input-password
+        v-model="formData.password"
+        label="Password"
+        placeholder=""
+        hint="Seu email é sua credencial"
+        error-message="Oops! Senha incorreta"
+        label-icon="fa-solid fa-circle-info"
+        title="Sua senha de segurança"
+        title-position="left"
+        size="md"
+        max="200"
+        min="8"
+        score
+      />
       <label class="block mt-4 text-sm">
         <span class="text-gray-700 dark:text-gray-400">Password</span>
         <input
@@ -79,11 +102,21 @@
 </template>
 
 <script>
+import InputPassword from '~/components/Forms/InputPassword.vue'
 // import inputText from '~/components/Forms/inputText.vue'
 export default {
 //   components: { inputText },
   name: 'LoginPage',
-  layout: 'guest'
+  components: { InputPassword },
+  layout: 'guest',
+  data () {
+    return {
+      formData: {
+        login: '',
+        password: ''
+      }
+    }
+  }
 }
 </script>
 

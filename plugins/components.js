@@ -1,9 +1,10 @@
 import Vue from 'vue'
-// import inputText from '~/components/Forms/InputText'
 import inputText from '~/components/Forms/InputText'
+import inputPassword from '~/components/Forms/InputPassword'
 
 const components = {
-  inputText
+  inputText,
+  inputPassword
 }
 
 // Vue.component(components)

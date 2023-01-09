@@ -1,0 +1,10 @@
+<input-text
+  label="Email"
+  placeholder="seu@email.com"
+  hint="Seu email é sua credencial"
+  error-message="Oops! Este email não está cadastrado"
+  label-icon="fa-solid fa-circle-info"
+  title="oii"
+  title-position="left"
+  size="md"
+/>
