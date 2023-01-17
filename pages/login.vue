@@ -17,6 +17,7 @@
         title-position="left"
         size="md"
       />
+      {{ formData.password }}
       <input-password
         v-model="formData.password"
         label="Password"
@@ -115,6 +116,11 @@ export default {
         login: '',
         password: ''
       }
+    }
+  },
+  watch: {
+    formData (value) {
+      console.log(value)
     }
   }
 }

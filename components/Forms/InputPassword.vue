@@ -82,7 +82,7 @@ export default {
   },
   watch: {
     data (value) {
-      console.log(value.length)
+    //   console.log(value.length)
       if (value.length <= 5) {
         this.progress = {
           color: 'progress-error',
